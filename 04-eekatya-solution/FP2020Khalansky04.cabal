@@ -1,0 +1,51 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 01b89bbe989bd111557c32f5c1a9bba85ef0fd22d505a55a00232846f8a3d7c0
+
+name:           FP2020Khalansky04
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/FP2020Khalansky/04#readme>
+homepage:       https://github.com/FP2020Khalansky/04#readme
+bug-reports:    https://github.com/FP2020Khalansky/04/issues
+author:         Dmitry Khalansky
+maintainer:     dkhalansky+fp2020@gmail.com
+copyright:      2020 Dmitry Khalansky
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/FP2020Khalansky/04
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_FP2020Khalansky04
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+test-suite FP2020Khalansky04-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_FP2020Khalansky04
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      FP2020Khalansky04
+    , HUnit
+    , base >=4.7 && <5
+  default-language: Haskell2010
